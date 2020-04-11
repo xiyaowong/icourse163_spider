@@ -1,4 +1,3 @@
-"""..."""
 import re
 from typing import List
 
@@ -11,7 +10,7 @@ class CourseCatalog:
     """
     __headers = {
         "user-agent": ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
-                        "Chrome/80.0.3987.149 Safari/537.36")
+                       "Chrome/80.0.3987.149 Safari/537.36")
     }
     __list_url = "https://www.icourse163.org/dwr/call/plaincall/CourseBean.getMocTermDto.dwr"
     __list_data = {
@@ -117,7 +116,8 @@ class CourseCatalog:
         data = []
         for chapter in self.chapters:
             chapterId = chapter["chapterId"]
-            re_lessons = r'chapterId=' + str(chapterId) + r'.+?contentType=1.+?id=(\d+).+?isTestChecked=false.+?name="(.*?)".+?test'
+            re_lessons = r'chapterId=' + str(chapterId) + \
+                r'.+?contentType=1.+?id=(\d+).+?isTestChecked=false.+?name="(.*?)".+?test'
             lessons = re.findall(re_lessons, text)
             for lesson in lessons:
                 data.append({

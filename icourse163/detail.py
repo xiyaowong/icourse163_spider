@@ -2,26 +2,26 @@
 资源详情
 """
 import re
-import requests
 
+import requests
 
 _headers = {
     "user-agent": ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
-                    "Chrome/80.0.3987.149 Safari/537.36")
+                   "Chrome/80.0.3987.149 Safari/537.36")
 }
 _detail_url = "https://www.icourse163.org/dwr/call/plaincall/CourseBean.getLessonUnitLearnVo.dwr"
 _detail_data = {
-    'callCount':'1',
-    'scriptSessionId':'${scriptSessionId}190',
-    'httpSessionId':'184f53a7e78148749e219d745b52e6a7',
-    'c0-scriptName':'CourseBean',
-    'c0-methodName':'getLessonUnitLearnVo',
-    'c0-id':'0',
-    'c0-param0':None,  # number:{contentId}
-    'c0-param1':None,  # number:{contentType}
-    'c0-param2':'number:0',
-    'c0-param3':None,  # number:{videoId/pdfId}
-    'batchId':'1584867320893',
+    'callCount': '1',
+    'scriptSessionId': '${scriptSessionId}190',
+    'httpSessionId': '184f53a7e78148749e219d745b52e6a7',
+    'c0-scriptName': 'CourseBean',
+    'c0-methodName': 'getLessonUnitLearnVo',
+    'c0-id': '0',
+    'c0-param0': None,  # number:{contentId}
+    'c0-param1': None,  # number:{contentType}
+    'c0-param2': 'number:0',
+    'c0-param3': None,  # number:{videoId/pdfId}
+    'batchId': '1584867320893',
 }
 
 

@@ -4,7 +4,6 @@ import os
 from icourse163.CourseCatalog import CourseCatalog
 from icourse163.detail import get_detail
 
-
 here = os.path.abspath(os.path.dirname(__file__))
 
 if __name__ == "__main__":
